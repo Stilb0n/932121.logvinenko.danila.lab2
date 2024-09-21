@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Высота окна браузера */
+    margin: 0;
+}
+
+header {
+    text-align: left;
+    background-color: #EAEAEA; /* Серый фон для заголовка */
+    padding: 0;
+}
+
+.container {
+    flex: 1; /* Занимает оставшееся пространство */
+    display: flex;
+    align-items: flex-start;
+}
+
+footer {
+    background-color: black;
+    color: #FFFF80;
+    text-align: center;
+    padding: 1px;
+    margin: 0; /* Убираем отступы */
+}
+
+.red-italic {
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.left {
+    background-color: #C8FC98;
+    flex: 0 0 200px;
+    padding: 10px;
+}
+
+.content {
+    padding: 10px;
+    flex: 1; /* Контент занимает оставшееся пространство */
+}
+
+.left-column {
+    background-color: #C8FC98;
+    flex: 0 0 25%;
+    padding: 10px;
+}
+
+.content-column {
+    flex: 1;
+    background-color: white; /* Белый фон для Content Column */
+    padding: 10px;
+}
+
+.right-column {
+    background-color: #FDE95E;
+    flex: 0 0 200px;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: #FFFF80; /* Цвет текста */
+    height: 50px; /* Установите фиксированную высоту */
+    line-height: 30px; /* Центрирование текста по вертикали */
+    width: 100%; /* Полная ширина */
+    margin-top: 0; /* Уберите верхний отступ */
+    margin-bottom: 0; /* Убедитесь, что нет нижнего отступа */
+}
+
+footer a {
+    color: #FFFF80;  /* Задаём цвет ссылке в footer */
+   
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Размещаем колонки вертикально */
+    }
+
+    .left-column, .right-column {
+        width: 100%; /* Колонки занимают всю ширину */
+    }
+}
+
+
+

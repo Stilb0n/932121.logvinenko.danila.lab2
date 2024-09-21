@@ -1,0 +1,19 @@
+#C8FC98-салатовый
+#EAEAEA-белый
+#FFFF80-банановый крем
+#FDE95E-горчичный
+red
+blue
+green
+blueviolet
+darkred
+peru
+forestgreen
+indianred
+indigo
+white
+aqua
+bisque
+darkgray
+limegreen
+aquamarine

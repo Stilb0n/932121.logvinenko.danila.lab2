@@ -1,0 +1,80 @@
+/* Основные стили для body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Обеспечиваем, что body занимает всю высоту экрана */
+}
+
+/* Стили для заголовка */
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    flex-shrink: 0; /* Запрещаем заголовку сжиматься */
+}
+
+/* Основной контейнер */
+.container {
+    display: flex;
+    flex-grow: 1; /* Заполняет оставшееся пространство */
+    overflow: hidden; /* Отключаем прокрутку */
+}
+
+/* Левая колонка (фиксированная ширина) */
+.left-column {
+    background-color: #c8fc98; 
+    width: 200px; /* Ширина колонки */
+    padding: 10px;
+    box-sizing: border-box; 
+    flex-shrink: 0; /* Запрещаем колонке сжиматься */
+}
+
+/* Контентная колонка (резиновая ширина) */
+.content-column {
+    background-color: #fff; /* Цвет фона для контентной колонки */
+    padding: 10px; /* Отступы внутри колонки */
+    box-sizing: border-box; /* Включаем отступы и границы в ширину и высоту */
+    flex-grow: 1; /* Заполняет оставшееся пространство */
+    overflow: hidden; /* Отключаем прокрутку */
+    display: flex; /* Используем flexbox для вложенных элементов */
+    flex-direction: column; /* Устанавливаем направление на вертикальное */
+}
+
+/* Пример для контента внутри контентной колонки */
+.content {
+    flex-grow: 1; /* Заполняем оставшееся пространство */
+    overflow: auto; /* Можно включить прокрутку здесь, если нужно */
+}
+
+/* Стили для футера */
+footer {
+    text-align: center;
+    background-color: black;
+    color: yellow;
+    padding: 10px;
+}
+
+footer a {
+    color: yellow;
+    text-decoration: none;
+}
+
+/* Медиа-запрос для сжатого состояния */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .content-column {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-column {
+        margin-left: 0;
+    }
+}
