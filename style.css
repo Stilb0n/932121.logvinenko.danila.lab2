@@ -243,6 +243,7 @@ footer {
     border: 3px solid;
     border-color: green;
     display: flex;
+    overflow: hidden;
 }
 
 .container2-12 {
@@ -288,16 +289,21 @@ footer {
 
 
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
     .list2-14 {
         list-style: none;
         display: flex;
+        flex-direction: row; 
         padding-top: 0px;
         margin: -2px;
     }
 
     .list-container-2-14 {
-        max-height: 15px;
+        display: flex;
+        flex-direction: row; 
+        justify-content: flex-start;
+        max-height: 15px; 
+        overflow: hidden; 
         margin-top: 20px;
         margin-bottom: 20px;
         min-width: calc(100% - 10px);
@@ -308,5 +314,6 @@ footer {
         background-color: darkgray;
         margin: 0;
         width: calc(85% - 60px);
+        flex-shrink: 0; 
     }
 }
